@@ -24,7 +24,7 @@ public:
     
     Package(string, string, string, string, int, string, string, string, string, int, double, double);
     
-    ~Package();
+    virtual ~Package();
     
 
 //    void setSenderInfo(string, string, string, string, int);

@@ -5,6 +5,13 @@
 //  Created by Elizabeth Tremblay & Ali Mekouar on 2025-03-11.
 //
 // 
+
+// Base* b = new Derived();  // Pointer to Base class, object of Derived class
+// b->display();  // Calls Derived class's display method
+
+
+
+
 #include "Package.hpp"
 
 Package::Package(){};

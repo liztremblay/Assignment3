@@ -35,7 +35,7 @@ public:
 //    string getRecipientInfo() const;
     double getCostPerOunce();
     
-    void printInfo();
+    virtual void printInfo();
     
     virtual double calculateCost();
 };

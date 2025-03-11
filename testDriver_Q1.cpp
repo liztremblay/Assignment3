@@ -1,0 +1,22 @@
+//
+//  main.cpp
+//  40117481_20273411_A3
+//
+//  Created by Elizabeth Tremblay on 2025-03-11.
+//
+
+#include <iostream>
+using namespace std;
+
+void testStaticBinding(){};
+
+void testDynamicBinding(){};
+
+int main(){
+    testStaticBinding();
+    testDynamicBinding();
+    
+    return 0;
+}
+
+

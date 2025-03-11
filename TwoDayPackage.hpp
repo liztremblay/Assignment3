@@ -1,0 +1,29 @@
+//
+//  TwoDayPackage.hpp
+//  40117481_20273411_A3
+//
+//  Created by Elizabeth Tremblay on 2025-03-11.
+//
+
+#ifndef TwoDayPackage_hpp
+#define TwoDayPackage_hpp
+
+#include <string>
+#include "Package.hpp"
+using namespace std;
+
+class TwoDayPackage: public Package {
+private:
+    double twoDayFee;
+    
+public:
+    TwoDayPackage();
+    
+    TwoDayPackage(string, string, string, string, int, string, string, string, string, int, int, double, double, double);
+    
+    ~TwoDayPackage();
+    
+    double calculateCost() override;
+};
+
+#endif /* TwoDayPackage_hpp */

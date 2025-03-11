@@ -4,6 +4,7 @@
 //
 //  Created by Elizabeth Tremblay on 2025-03-11.
 //
+//llll
 
 #ifndef Package_hpp
 #define Package_hpp
@@ -18,13 +19,15 @@ protected:
     int recipientZip;
     double weight, costPerOunce;
     
+    
 public:
     Package();
     
     Package(string, string, string, string, int, string, string, string, string, int, double, double);
     
-    ~Package();
+    virtual ~Package();
     
+
 //    void setSenderInfo(string, string, string, string, int);
 //    void setRecipientInfo(string, string, string, string, int);
     

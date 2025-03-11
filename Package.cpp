@@ -6,11 +6,6 @@
 //
 // 
 
-// Base* b = new Derived();  // Pointer to Base class, object of Derived class
-// b->display();  // Calls Derived class's display method
-
-
-
 
 #include "Package.hpp"
 
@@ -28,6 +23,10 @@ Package::Package(string sName, string sAddress, string sCity, string sSate, int 
     }
     costPerOunce = cPerOz;
 };
+
+// Base* b = new Derived();  // Pointer to Base class, object of Derived class
+// b->display();  // Calls Derived class's display method
+
 
 Package::~Package(){};
 

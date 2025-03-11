@@ -18,7 +18,6 @@ protected:
     int recipientZip;
     double weight, costPerOunce;
     
-    //hello
     
 public:
     Package();
@@ -28,11 +27,8 @@ public:
     ~Package();
     
 
-//void setSenderInfo(string, string, string, string, int);
-
-  void setSenderInfo(string, string, string, string, int);
-
-void setRecipientInfo(string, string, string, string, int);
+//    void setSenderInfo(string, string, string, string, int);
+//    void setRecipientInfo(string, string, string, string, int);
     
 //    string getSenderInfo() const;
 //    string getRecipientInfo() const;

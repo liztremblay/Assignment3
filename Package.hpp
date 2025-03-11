@@ -25,7 +25,11 @@ public:
     
     ~Package();
     
+<<<<<<< HEAD
 //    void setSenderInfo(string, string, string, string, int);
+=======
+  void setSenderInfo(string, string, string, string, int);
+>>>>>>> b87c9ff (Test)
 //    void setRecipientInfo(string, string, string, string, int);
     
 //    string getSenderInfo() const;

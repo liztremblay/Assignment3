@@ -9,5 +9,6 @@
 #define ComplexNumber_hpp
 
 #include <stdio.h>
+#include <iostream>
 
 #endif /* ComplexNumber_hpp */

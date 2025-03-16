@@ -6,3 +6,34 @@
 //
 
 #include <stdio.h>
+#include "ComplexNumber.h"
+
+// Task 2.2 : test functions 
+void testComplexNumber() {
+    ComplexNumber c1(3, 4), c2(1, -2);
+    cout << "c1: " << c1 << endl;
+    cout << "c2: " << c2 << endl;
+
+    cout << "c1 + c2 = " << (c1 + c2) << endl;
+    cout << "c1 - c2 = " << (c1 - c2) << endl;
+    cout << "c1 * c2 = " << (c1 * c2) << endl;
+    cout << "c1 / c2 = " << (c1 / c2) << endl;
+
+    cout << "++c1 = " << ++c1 << endl;
+    cout << "c1++ = " << c1++ << endl;
+    cout << "c1 after c1++ = " << c1 << endl;
+
+    cout << "c1 rotated by 45 degrees = " << (c1 ^ (M_PI / 4)) << endl;
+    cout << "~c1 (modulus) = " << ~c1 << endl;
+    cout << "!c1 (conjugate) = " << !c1 << endl;
+
+    cout << "Real part: " << c1[0] << endl;
+    cout << "Imaginary part: " << c1[1] << endl;
+}
+
+
+int main() {
+    testComplexNumber();
+    
+    return 0;
+}

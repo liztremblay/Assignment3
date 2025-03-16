@@ -24,7 +24,7 @@ public:
 	ComplexNumber(double r = 0, double i = 0);
 
 	friend ostream& operator<<(ostream& os, const ComplexNumber& c);
-	friend  istream& operator>>(istream& is, ComplexNumber& c);
+	friend istream& operator>>(istream& is, ComplexNumber& c);
 
 	ComplexNumber operator + (const ComplexNumber& other) const;
 	ComplexNumber operator - (const ComplexNumber& other) const;

@@ -53,6 +53,6 @@ ComplexNumber& ComplexNumber::operator++() { // Prefix
     return *this;
 }
 
-ComplexNumber operator++(int) { // Postfix
+ComplexNumber ComplexNumber::operator++(int) { // Postfix
 }
 

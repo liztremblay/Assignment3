@@ -39,8 +39,8 @@ public:
 	ComplexNumber operator++(int); // Postfix
 	ComplexNumber& operator++(); // Prefix
 
-	ComplexNumber operator--(int);
-	ComplexNumber& operator--();
+	ComplexNumber operator--(int); // Postfix
+	ComplexNumber& operator--(); // Prefix
 
 	double operator[](int index);
 

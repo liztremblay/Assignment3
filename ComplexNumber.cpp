@@ -22,8 +22,25 @@ ComplexNumber ComplexNumber::operator - (const ComplexNumber& other) const {
 }
 
 // (a + bi)(c + di) = ac + adi + bci + bdi^2 = (ac - bd) + (ad + bc)i
-ComplexNumber ComplexNumber::operator*(const ComplexNumber& other) const {
+ComplexNumber ComplexNumber::operator * (const ComplexNumber& other) const {
     return ComplexNumber((real * other.real) - (imag * other.imag), (real * other.imag) + (imag * other.real))
 }
 
 // (a + bi) / (c + di) = [(a + bi)(c - di)] / (c^2 + d^2) = [(ac + bd) + (bc - ad)i] / (c^2 + d^2)
+ComplexNumber ComplexNumber::operator / (const ComplexNumber& other) const {
+    double denominator = other.real * other.real + other.imag * other.imag;
+    if (denominator == 0) {
+        cerr << "Division by zero" << endl;
+        return ComplexNumber();
+    }
+    return ComplexNumber((real * other.real + imag * other.imag) / denominator, (imag * other.real - real * other.imag) / denominator);
+}
+
+
+bool ComplexNumber::operator == (const ComplexNumber& other) const {
+    return real == other.real && imag == other.imag;
+}
+
+bool ComplexNumber::operator != (const ComplexNumber& other) const {
+    return real != other.real && imag != other.imag;
+}

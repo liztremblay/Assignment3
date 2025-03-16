@@ -25,7 +25,7 @@ ComplexNumber ComplexNumber::operator - (const ComplexNumber& other) const {
 
 // (a + bi)(c + di) = ac + adi + bci + bdi^2 = (ac - bd) + (ad + bc)i
 ComplexNumber ComplexNumber::operator * (const ComplexNumber& other) const {
-    return ComplexNumber((real * other.real) - (imag * other.imag), (real * other.imag) + (imag * other.real))
+    return ComplexNumber((real * other.real) - (imag * other.imag), (real * other.imag) + (imag * other.real));
 }
 
 // (a + bi) / (c + di) = [(a + bi)(c - di)] / (c^2 + d^2) = [(ac + bd) + (bc - ad)i] / (c^2 + d^2)
@@ -46,7 +46,7 @@ bool ComplexNumber::operator == (const ComplexNumber& other) const {
 bool ComplexNumber::operator != (const ComplexNumber& other) const {
     return real != other.real && imag != other.imag;
 }
-
+/*
 ComplexNumber& ComplexNumber::operator++() { // ++Prefix
     ++real;
     ++imag;
@@ -64,7 +64,7 @@ ComplexNumber& ComplexNumber::operator--() { // --Prefix
 
 ComplexNumber ComplexNumber::operator--(int) { // Postfix--
 }
-
+*/
 ComplexNumber ComplexNumber::operator ^ (double angle) const {
     double magnitude = sqrt(real * real + imag * imag);
     double newReal = magnitude * cos(angle);

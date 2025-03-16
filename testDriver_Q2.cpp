@@ -6,7 +6,8 @@
 //
 
 #include <stdio.h>
-#include "ComplexNumber.h"
+#include "ComplexNumber.hpp"
+
 
 // Task 2.2 : test functions 
 void testComplexNumber() {
@@ -19,17 +20,19 @@ void testComplexNumber() {
     cout << "c1 * c2 = " << (c1 * c2) << endl;
     cout << "c1 / c2 = " << (c1 / c2) << endl;
 
-    cout << "++c1 = " << ++c1 << endl;
-    cout << "c1++ = " << c1++ << endl;
-    cout << "c1 after c1++ = " << c1 << endl;
+    //cout << "++c1 = " << ++c1 << endl;
+    //cout << "c1++ = " << c1++ << endl;
+    //cout << "c1 after c1++ = " << c1 << endl;
 
-    cout << "c1 rotated by 45 degrees = " << (c1 ^ (M_PI / 4)) << endl;
+    cout << "c1 rotated by 45 degrees = " << (c1 ^ (3,14 / 4)) << endl;
     cout << "~c1 (modulus) = " << ~c1 << endl;
     cout << "!c1 (conjugate) = " << !c1 << endl;
 
     cout << "Real part: " << c1[0] << endl;
     cout << "Imaginary part: " << c1[1] << endl;
 }
+
+// Task 2.3 
 
 
 int main() {

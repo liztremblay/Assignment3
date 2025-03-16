@@ -47,12 +47,21 @@ bool ComplexNumber::operator != (const ComplexNumber& other) const {
     return real != other.real && imag != other.imag;
 }
 
-ComplexNumber& ComplexNumber::operator++() { // Prefix
+ComplexNumber& ComplexNumber::operator++() { // ++Prefix
     ++real;
     ++imag;
     return *this;
 }
 
-ComplexNumber ComplexNumber::operator++(int) { // Postfix
+ComplexNumber ComplexNumber::operator++(int) { // Postfix++
+}
+
+ComplexNumber& ComplexNumber::operator--() { // --Prefix
+    --real;
+    --imag;
+    return *this;
+}
+
+ComplexNumber ComplexNumber::operator--(int) { // Postfix--
 }
 

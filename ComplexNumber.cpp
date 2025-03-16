@@ -11,6 +11,8 @@
 
 ComplexNumber::ComplexNumber(double r, double i) : real(r), imag(i) {}
 
+// Task 2.1
+
 // (a + bi) + (c + di) = (a + c) + (b + d)i
 ComplexNumber ComplexNumber::operator + (const ComplexNumber& other) const {
     return ComplexNumber(real + other.real, imag + other.imag);
@@ -44,3 +46,13 @@ bool ComplexNumber::operator == (const ComplexNumber& other) const {
 bool ComplexNumber::operator != (const ComplexNumber& other) const {
     return real != other.real && imag != other.imag;
 }
+
+ComplexNumber& ComplexNumber::operator++() { // Prefix
+    ++real;
+    ++imag;
+    return *this;
+}
+
+ComplexNumber operator++(int) { // Postfix
+}
+

@@ -36,8 +36,8 @@ public:
 
 	ComplexNumber operator ^ (double angle) const;
 
-	ComplexNumber operator++(int);
-	ComplexNumber& operator++();
+	ComplexNumber operator++(int); // Postfix
+	ComplexNumber& operator++(); // Prefix
 
 	ComplexNumber operator--(int);
 	ComplexNumber& operator--();

@@ -65,3 +65,31 @@ ComplexNumber& ComplexNumber::operator--() { // --Prefix
 ComplexNumber ComplexNumber::operator--(int) { // Postfix--
 }
 
+ComplexNumber ComplexNumber::operator ^ (double angle) const {
+    double magnitude = sqrt(real * real + imag * imag);
+    double newReal = magnitude * cos(angle);
+    double newImag = magnitude * sin(angle);
+    return ComplexNumber(newReal, newImag);
+}
+
+double ComplexNumber::operator~() const {
+    return sqrt(real * real + imag * imag);
+}
+
+ComplexNumber ComplexNumber::operator!() const {
+    return ComplexNumber(real, -imag);
+}
+
+double ComplexNumber::operator[](int index) {
+    if (index == 0) {
+        return real;
+    }
+    else if (index == 1) {
+        return imag;
+    }
+    else {
+        cerr << "Index out of range" << endl;
+        return 0;
+    }
+}
+

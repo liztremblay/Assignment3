@@ -10,5 +10,43 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <cmath>
+using namespace std;
+
+
+class ComplexNumber {
+
+private:
+	double real, imag;
+
+public:
+
+	ComplexNumber(double r = 0, double i = 0);
+
+	friend ostream& operator<<(ostream& os, const ComplexNumber& c);
+	friend  istream& operator>>(istream& is, ComplexNumber& c);
+
+	ComplexNumber operator + (const ComplexNumber& other) const;
+	ComplexNumber operator - (const ComplexNumber& other) const;
+	ComplexNumber operator * (const ComplexNumber& other) const;
+	ComplexNumber operator / (const ComplexNumber& other) const;
+
+	bool operator == (const ComplexNumber& other) const;
+	bool operator != (const ComplexNumber& other) const;
+
+	ComplexNumber operator ^ (double angle) const;
+
+	ComplexNumber operator++(int);
+	ComplexNumber& operator++();
+
+	ComplexNumber operator--(int);
+	ComplexNumber& operator--();
+
+	double operator[](int index);
+
+	double operator~() const; // Returns sqrt(a^2 + b^2)
+	ComplexNumber operator!() const; // Returns a - bi
+
+};
 
 #endif /* ComplexNumber_hpp */

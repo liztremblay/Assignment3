@@ -8,6 +8,9 @@
 
 
 #include "Package.hpp"
+#include <iostream>
+#include <string>
+#include <stdexcept>
 
 Package::Package(){};
 
@@ -24,22 +27,32 @@ Package::Package(string sName, string sAddress, string sCity, string sSate, int 
     costPerOunce = cPerOz;
 };
 
-// Base* b = new Derived();  // Pointer to Base class, object of Derived class
-// b->display();  // Calls Derived class's display method
-
 
 Package::~Package(){};
 
-//void Package::setSenderInfo(string, string, string, string, int){};
-//void Package::setRecipientInfo(string, string, string, string, int){};
+string Package::getSenderName() const{
+    return senderName;
+}
+string Package::getRecipientName() const{
+    return recipientName;
+}
+
 double Package::getCostPerOunce(){
     return costPerOunce;
 }
 
-//string Package::getSenderInfo() const{};
-//string Package::getRecipientInfo() const{};
+string Package::getSenderInfo() const{
+    return senderName + "\n" + senderAddress + ", " + senderCity + ", " + senderState + "\n" + to_string(senderZip);
+};
 
-//void Package::printInfo(){};
+string Package::getRecipientInfo() const{
+    return recipientName + "\n" + recipientAddress + ", " + recipientCity + ", " + recipientState + "\n" + to_string(recipientZip);
+};
+
+/*void Package::printInfo() const{
+    cout << getSenderInfo() << endl << endl;
+    cout << getRecipientInfo() << endl << endl;
+};*/
 
 double Package::calculateCost(){
     return weight*costPerOunce;

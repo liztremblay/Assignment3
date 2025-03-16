@@ -26,15 +26,13 @@ public:
     
     virtual ~Package();
     
-
-//    void setSenderInfo(string, string, string, string, int);
-//    void setRecipientInfo(string, string, string, string, int);
+    string getSenderName() const;
+    string getRecipientName() const;
     
-//    string getSenderInfo() const;
-//    string getRecipientInfo() const;
+    string getSenderInfo() const;
+    string getRecipientInfo() const;
+    
     double getCostPerOunce();
-    
-    virtual void printInfo();
     
     virtual double calculateCost();
 };

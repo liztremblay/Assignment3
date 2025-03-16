@@ -7,6 +7,7 @@
 
 #include "TwoDayPackage.hpp"
 #include <string>
+#include <stdexcept>
 using namespace std;
 
 TwoDayPackage::TwoDayPackage(){};

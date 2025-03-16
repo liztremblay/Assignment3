@@ -34,9 +34,10 @@ void testComplexNumber() {
 
 // Task 2.3 
 
-
+/*
 int main() {
     testComplexNumber();
     
     return 0;
 }
+*/

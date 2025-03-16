@@ -6,6 +6,8 @@
 //
 
 #include "OvernightPackage.hpp"
+#include <string>
+#include <stdexcept>
 
 OvernightPackage::OvernightPackage(){};
 

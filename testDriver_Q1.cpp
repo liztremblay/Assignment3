@@ -81,7 +81,7 @@ void testDynamicBinding(){
 
 
 int main(){
-    //testStaticBinding();
+    testStaticBinding();
     testDynamicBinding();
     
     return 0;

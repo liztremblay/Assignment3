@@ -93,3 +93,13 @@ double ComplexNumber::operator[](int index) {
     }
 }
 
+ostream& operator<<(ostream& os, const ComplexNumber& c) {
+    os << c.real << " + " << c.imag << "i";
+    return os;
+}
+
+istream& operator>>(istream& is, ComplexNumber& c) {
+    is >> c.real >> c.imag;
+    return is;
+}
+

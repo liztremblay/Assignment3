@@ -1,8 +1,8 @@
 //
 //  Package.hpp
-//  40117481_20273411_A3
+//  40117481_40273411_A3
 //
-//  Created by Elizabeth Tremblay on 2025-03-11.
+//  Created by Elizabeth Tremblay & Ali Mekouar on 2025-03-11.
 //
 
 #ifndef Package_hpp
@@ -26,8 +26,9 @@ public:
     
     virtual ~Package();
     
-    string getSenderName() const;
-    string getRecipientName() const;
+    
+    string extractSenderName() const;
+    string extractRecipientName() const;
     
     string getSenderInfo() const;
     string getRecipientInfo() const;

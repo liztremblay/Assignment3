@@ -1,8 +1,8 @@
 //
 //  ComplexNumber.hpp
-//  40117481_20273411_A3
+//  40117481_40273411_A3
 //
-//  Created by Elizabeth Tremblay on 2025-03-11.
+//  Created by Elizabeth Tremblay & Ali Mekouar on 2025-03-11.
 //
 
 #ifndef ComplexNumber_hpp

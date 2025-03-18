@@ -1,6 +1,6 @@
 //
 //  Package.cpp
-//  40117481_20273411_A3
+//  40117481_40273411_A3
 //
 //  Created by Elizabeth Tremblay & Ali Mekouar on 2025-03-11.
 //
@@ -11,6 +11,7 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include <sstream>
 
 Package::Package(){};
 
@@ -30,11 +31,20 @@ Package::Package(string sName, string sAddress, string sCity, string sSate, int 
 
 Package::~Package(){};
 
-string Package::getSenderName() const{
-    return senderName;
+string Package::extractSenderName() const{
+    string sender = getSenderInfo();
+    stringstream si(sender);
+    string name;
+    getline(si,name);
+    return name;
 }
-string Package::getRecipientName() const{
-    return recipientName;
+
+string Package::extractRecipientName() const{
+    string recipient = getRecipientInfo();
+    stringstream ri(recipient);
+    string name;
+    getline(ri,name);
+    return name;
 }
 
 double Package::getCostPerOunce(){
@@ -48,11 +58,6 @@ string Package::getSenderInfo() const{
 string Package::getRecipientInfo() const{
     return recipientName + "\n" + recipientAddress + ", " + recipientCity + ", " + recipientState + "\n" + to_string(recipientZip);
 };
-
-/*void Package::printInfo() const{
-    cout << getSenderInfo() << endl << endl;
-    cout << getRecipientInfo() << endl << endl;
-};*/
 
 double Package::calculateCost(){
     return weight*costPerOunce;

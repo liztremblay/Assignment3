@@ -1,8 +1,8 @@
 //
-//  main.cpp
-//  40117481_20273411_A3
+//  testDriver_Q1.cpp
+//  40117481_40273411_A3
 //
-//  Created by Elizabeth Tremblay on 2025-03-11.
+//  Created by Elizabeth Tremblay & Ali Mekouar on 2025-03-11.
 //
 
 #include <iostream>
@@ -17,11 +17,11 @@ void testStaticBinding(){
     TwoDayPackage tdp("Irving Bailiff", "Lumon Industries", "Kier", "PE", 87351, "Burt Goodman", "O&D Department", "Kier", "PE", 29313, 8.7, 1.50, 2.50);
     OvernightPackage op("Mark S.", "Lumon Industries", "Kier", "PE", 12345 , "Helly R.", "Lumon Industries", "Kier", "PE", 56789, 10.2, 1.50, 3.00);
     
-    cout << "The shipping cost is for the package to " << p.getRecipientName() << " from " << p.getSenderName() << " is " << fixed << setprecision(2)<< p.calculateCost() << "$." << endl;
+    cout << "The shipping cost is for the package to " << p.extractRecipientName() << " from " << p.extractSenderName() << " is " << fixed << setprecision(2)<< p.calculateCost() << "$." << endl;
     
-    cout << "The shipping cost is for the two day package to " << tdp.getRecipientName() << " from " << tdp.getSenderName() << " is " << fixed << setprecision(2)<< tdp.calculateCost() << "$." << endl;
+    cout << "The shipping cost is for the two day package to " << tdp.extractRecipientName() << " from " << tdp.extractSenderName() << " is " << fixed << setprecision(2)<< tdp.calculateCost() << "$." << endl;
     
-    cout << "The shipping cost is for the overnight package to " << op.getRecipientName() << " from " << op.getSenderName() << " is " << fixed << setprecision(2)<< op.calculateCost()  << "$." << endl << endl;
+    cout << "The shipping cost is for the overnight package to " << op.extractRecipientName() << " from " << op.extractSenderName() << " is " << fixed << setprecision(2)<< op.calculateCost()  << "$." << endl << endl;
     
 };
 
@@ -66,11 +66,12 @@ void testDynamicBinding(){
         cout << "-------------------Package #" << (i+1) << "-------------------" << endl;
         cout << packages[i]->getSenderInfo() << endl << endl;
         cout << packages[i]->getRecipientInfo() << endl << endl;
-        cout << "Shipping cost: " << packages[i]->calculateCost() << "$."<< endl << endl;
+        cout << "Shipping cost: " << packages[i]->calculateCost() << "$"<< endl << endl;
         sum += packages[i]->calculateCost();
     }
     
-    cout << "Total shipping cost: " << sum << "$." << endl<< endl;
+    cout << "-------------------------------\n";
+    cout << "Total shipping cost: " << sum << "$" << endl<< endl;
     
     for (int i=0; i<10; i++){
         delete packages[i];

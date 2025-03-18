@@ -20,9 +20,9 @@ void testComplexNumber() {
     cout << "c1 * c2 = " << (c1 * c2) << endl;
     cout << "c1 / c2 = " << (c1 / c2) << endl;
 
-    //cout << "++c1 = " << ++c1 << endl;
-    //cout << "c1++ = " << c1++ << endl;
-    //cout << "c1 after c1++ = " << c1 << endl;
+    cout << "++c1 = " << ++c1 << endl;
+    cout << "c1++ = " << c1++ << endl;
+    cout << "c1 after c1++ = " << c1 << endl;
 
     cout << "c1 rotated by 45 degrees = " << (c1 ^ (3,14 / 4)) << endl;
     cout << "~c1 (modulus) = " << ~c1 << endl;
@@ -34,10 +34,11 @@ void testComplexNumber() {
 
 // Task 2.3 
 
-/*
+////////////////////////////////////////
+
 int main() {
     testComplexNumber();
     
     return 0;
 }
-*/
+

@@ -46,7 +46,7 @@ bool ComplexNumber::operator == (const ComplexNumber& other) const {
 bool ComplexNumber::operator != (const ComplexNumber& other) const {
     return real != other.real && imag != other.imag;
 }
-/*
+
 ComplexNumber& ComplexNumber::operator++() { // ++Prefix
     ++real;
     ++imag;
@@ -54,6 +54,10 @@ ComplexNumber& ComplexNumber::operator++() { // ++Prefix
 }
 
 ComplexNumber ComplexNumber::operator++(int) { // Postfix++
+    ComplexNumber temp = *this;
+    real++;
+    imag++;
+    return temp;
 }
 
 ComplexNumber& ComplexNumber::operator--() { // --Prefix
@@ -63,8 +67,13 @@ ComplexNumber& ComplexNumber::operator--() { // --Prefix
 }
 
 ComplexNumber ComplexNumber::operator--(int) { // Postfix--
+    ComplexNumber temp = *this;
+    real--;
+    imag--;
+    return temp;
 }
-*/
+
+
 ComplexNumber ComplexNumber::operator ^ (double angle) const {
     double magnitude = sqrt(real * real + imag * imag);
     double newReal = magnitude * cos(angle);

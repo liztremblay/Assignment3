@@ -4,7 +4,8 @@
 //
 //  Created by Elizabeth Tremblay on 2025-03-11.
 //
-
+#include <cmath>
+#include <math.h>
 #include <stdio.h>
 #include "ComplexNumber.hpp"
 

@@ -55,8 +55,9 @@ ComplexNumber& ComplexNumber::operator++() { // ++Prefix
 
 ComplexNumber ComplexNumber::operator++(int) { // Postfix++
     ComplexNumber temp = *this;
-    real++;
-    imag++;
+    //real++;
+    //imag++;
+    ++(*this);
     return temp;
 }
 

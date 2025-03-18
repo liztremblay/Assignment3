@@ -49,11 +49,6 @@ string Package::getRecipientInfo() const{
     return recipientName + "\n" + recipientAddress + ", " + recipientCity + ", " + recipientState + "\n" + to_string(recipientZip);
 };
 
-/*void Package::printInfo() const{
-    cout << getSenderInfo() << endl << endl;
-    cout << getRecipientInfo() << endl << endl;
-};*/
-
 double Package::calculateCost(){
     return weight*costPerOunce;
 };

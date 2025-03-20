@@ -39,7 +39,7 @@ void generateMandelbrot(int iterations, ComplexNumber C) {
     ComplexNumber Z(0, 0);
     for (int i = 0; i < iterations; ++i) {
         Z = (Z * Z) + C;
-        std::cout << "Iteration " << i << ": " << Z << "\n";
+        std::cout << "Iteration n " << i << ": " << Z << "\n";
     }
 }
 

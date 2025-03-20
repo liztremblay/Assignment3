@@ -39,7 +39,12 @@ void generateMandelbrot(int iterations, ComplexNumber C) {
     ComplexNumber Z(0, 0);
     for (int i = 0; i < iterations; ++i) {
         Z = (Z * Z) + C;
-        std::cout << "Iteration n " << i << ": " << Z << "\n";
+        cout << "Iteration n " << i << ": " << Z << "\n";
+
+        if (~Z > 2) {
+            cout << "At n = " << i << ", it stops because it is divergent when |Z| exceeds 2" << endl;
+            break;
+        }
     }
 }
 
@@ -49,7 +54,7 @@ int main() {
     testComplexNumber();
 
     cout << "\n Mandelbrot Set Simulation:\n";
-    generateMandelbrot(4, ComplexNumber(4, 2));
+    generateMandelbrot(10, ComplexNumber(-0.75, 0.5));
 
     return 0;
 }

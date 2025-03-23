@@ -23,7 +23,7 @@ public:
     
     ~TwoDayPackage();
     
-    double calculateCost() override;
+    double calculateCost() override final;
 };
 
 #endif /* TwoDayPackage_hpp */

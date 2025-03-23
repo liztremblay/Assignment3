@@ -23,7 +23,7 @@ public:
     
     ~OvernightPackage();
     
-    double calculateCost() override;
+    double calculateCost() override final;
     
 };
 

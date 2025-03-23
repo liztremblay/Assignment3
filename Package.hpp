@@ -33,7 +33,7 @@ public:
     string getSenderInfo() const;
     string getRecipientInfo() const;
     
-    double getCostPerOunce();
+    double getCostPerOunce() const;
     
     virtual double calculateCost();
 };

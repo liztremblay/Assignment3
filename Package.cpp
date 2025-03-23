@@ -47,7 +47,7 @@ string Package::extractRecipientName() const{
     return name;
 }
 
-double Package::getCostPerOunce(){
+double Package::getCostPerOunce() const{
     return costPerOunce;
 }
 
